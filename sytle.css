@@ -1,0 +1,204 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background: linear-gradient(to bottom right,rgb(253, 223, 223),rgb(255, 204, 146));
+}
+.Home{
+    width: 100%;
+}
+nav{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    background: linear-gradient(to bottom right,rgb(250, 208, 208),rgb(250, 189, 119));
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 10000;
+}
+.logo img{
+    width: 90px;
+}
+ul{
+    display: flex;
+    margin-right: 20px;
+}
+li{
+    margin: 10px;
+    list-style: none;
+    text-align: center;
+}
+a{
+    text-decoration: none;
+    font-size: 20px;
+}
+.checkbtn{
+    font-size: 30px;
+    display: none;
+    margin-right: 30px;
+    cursor: pointer;
+}
+#Check{
+    display: none;
+}
+@media (max-width: 700px) {
+    ul{
+        position: fixed;
+        float:right;
+        display: block;
+        padding-top: 30px;
+        padding-right: 30px;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background:rgba(0, 0, 0, 0.6);
+        transition: .3s;
+    }
+    li{
+        text-align: end;
+    }
+    .checkbtn{
+        display: block;
+        
+    }
+    #Check:checked~ul{
+        left: -60%;
+    }
+    #Check:checked~ .checkbtn i:before{
+        content:"\f00d";
+    }
+    nav{
+        height: 60px;
+    }
+    .row2 .col1:nth-child(1),.row2 .col1:nth-child(2){
+        width: 100%;
+        height: auto;
+    }
+    .row2{
+        flex-direction: column;
+        padding: 0;
+    }
+}
+.Service{
+    width: 100%;
+    min-height: 90vh;
+}
+.row1{
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+    padding-bottom: 10px;
+    background: red;
+}
+.row1 h1{
+    font-size: 8vmin;
+}
+.line{
+    width: 40vmin;
+    height: 3px;
+    background: red;
+}
+.row2{
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+.card{
+    margin: 20px;
+}
+.row2 .col1{
+    min-height: 50vh;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+
+}
+.btn1{
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    width: 150px;
+    color: blue;
+    background: rgb(11, 11, 75);
+    padding: 10px;
+    border-radius: 18px;
+}
+.row2 .col1 h1{
+    font-size: 6vmin;
+    text-transform: uppercase;
+}
+
+.row2 .col1:nth-child(2) img{
+    width: 380px;
+}
+form{
+    padding: 50px;
+    width: 400px;
+    background: rgba(0, 0, 0, 0.1);
+}
+input{
+    width: 100%;
+    margin: 5px;
+    border: none;
+    border-bottom: 2px solid black ;
+    padding: 5px;
+    text-transform: uppercase;
+    background: transparent;
+    color: rgb(15, 2, 26);
+    font-weight: bolder;
+    outline: none;
+}
+input:focus{
+    border-bottom: 2px solid rgb(22, 67, 216) ;
+}
+
+textarea{
+    background: transparent;
+    color: rgb(15, 2, 26);
+    outline: none;
+}
+.fbtn{
+    width: 100%;
+    border-radius: 25px;
+    outline:none;
+    border: none;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+}
+.fbtn:hover{
+    background: rgb(145, 206, 193);
+    color: red;
+}
+footer{
+    width: 100%;
+    height: 90px;
+    background: linear-gradient(to bottom right,rgb(253, 223, 223),rgb(255, 204, 146));
+    text-align: center;
+}
+footer h2{
+    text-transform: capitalize;
+}
+::placeholder{
+    color: rgba(0, 0, 0,.1);
+}
+.rcontaint{
+    background: rgba(0, 0, 0, .2);
+    padding: 50px 20px;
+    position: relative;
+    
+}
